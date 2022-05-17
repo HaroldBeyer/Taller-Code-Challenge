@@ -3,19 +3,19 @@ let array = [5, 7, 1, 1, 2, 3, 22]
 array = [1, 1, 1, 1, 1, 7]
 
 function nonConstructibleChange(coins) {
-  let minimumValue = 0;
-  coins.sort((x, y) => x - y);
+  let minimumValue = 0
+  coins.sort((x, y) => x - y)
+  // 1, 1, 2 , 3 , 5 , 7, 22
 
   for (const coin of coins) {
     if (coin > minimumValue + 1) {
-      return minimumValue + 1;
+      return minimumValue + 1
     }
 
-    minimumValue += coin;
+    minimumValue += coin
   }
 
-  return minimumValue + 1;
-
+  return minimumValue + 1
  }
 
 console.log('1: ' , nonConstructibleChange(array))
